@@ -36,7 +36,7 @@ But this level of access also creates risk.
 
 ---
 
-## Why Kernel-Level Access Matters
+## Why Kernel-level access matters
 
 The Windows kernel is basically the core layer responsible for:
 
@@ -54,7 +54,7 @@ That made recovery significantly harder.
 
 ---
 
-## The Faulty Update
+## The faulty Update
 
 One important thing I noticed while studying this incident is that the problem was not a traditional software version release.
 
@@ -69,7 +69,7 @@ Which means:
 
 ---
 
-# Why Systems Failed So Aggressively
+## Why systems failed so aggressively
 
 Normally, when software breaks the application crashes, services restart, or users experience partial disruption.
 
@@ -95,7 +95,7 @@ Especially for organizations managing:
 
 ---
 
-# Why Rollback Was Not Enough
+## Why rollback wasn't enough
 
 This part fascinated me while researching the incident.
 
@@ -115,7 +115,7 @@ And honestly, this is where large-scale outages become interesting.
 
 ---
 
-# The Operational Side Of Technical Design
+## The Operational side Of Technical design
 
 One thing this outage highlighted very clearly is that technical architecture decisions always have operational consequences.
 
@@ -145,6 +145,32 @@ But it also means failures can spread extremely quickly across similar systems.
 
 ---
 
-# What Stood Out To Me the Most
+## Where safeguards struggled
 
-The most interesting part of this incident was not just the faulty update itself. But how modern infrastructure reacted to it.
+One thing this outage highlighted very clearly is that safeguards did exist.
+
+There were:
+monitoring systems,
+deployment pipelines,
+rollback mechanisms,
+and operational controls.
+
+But the failure spread faster than many safeguards could effectively contain it.
+
+Security updates are optimized for speed.
+Enterprise environments are optimized for consistency.
+Automation is optimized for scale.
+
+And during this outage, all three amplified the blast radius together.
+
+The systems behaved exactly the way they were designed to behave.
+
+That is honestly what makes this incident so important from an engineering perspective.
+
+Because the biggest risk was not only the faulty update itself… it was how efficiently modern infrastructure trusted and distributed it globally.
+
+---
+
+### What stood out to me the most
+
+For me, the most interesting part of this incident was not just the faulty update itself. But how modern infrastructure reacted to it.
